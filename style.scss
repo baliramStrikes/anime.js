@@ -1,0 +1,181 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    // background: skyblue;
+    background: black;
+    color: white;
+    overflow: hidden;
+    font-family: 'Francois One', sans-serif;
+    #pic {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: .4;
+        z-index: -1;
+        object-fit: cover;
+        filter: blur(2px);
+    }
+    nav {
+        width: 100%;
+        height: 80px;
+        // border: 2px solid white;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 100px;
+        a {
+            font-size: 2em;
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        menu {
+            // border: 2px solid white;
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            cursor: pointer;
+            span {
+                display: inline-block;
+                width: 80%;
+                height: 4px;
+                margin: 4px 0;
+                background: white;
+                transition: .3s;
+            }
+            &:hover span {
+                margin: 0%;
+            }
+            span:nth-child(odd) {
+                width: 50%;
+            }
+        }
+    }
+    .menulist {
+        width: 500px;
+        height: 100%;
+        position: absolute;
+        background: rgb(0, 0, 0);
+        top: 0%;
+        right: 0;
+        z-index: 5;
+        left: 100%;
+        transition: .5s;
+        .close {
+            width: 50px;
+            height: 50px;
+            background: #ff4500;
+            position: relative;
+            top: 20px;
+            left: calc(100% - 80px);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .5s;
+            cursor: pointer;
+            span {
+                width: 50%;
+                height: 5px;
+                background: white;
+                display: inline-block;
+            }
+            &:hover {
+                box-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500, 0 0 40px #ff4500;
+            }
+        }
+        ul {
+            width: 100%;
+            // height: 100%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            li {
+                text-align: center;
+                list-style: none;
+                padding: 5px 0;
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                    color: white;
+                    transition: .4s;
+                    &:hover {
+                        color: orangered;
+                        text-shadow: 0 0 20px orangered, 0 0 30px orangered, 0 0 40px orangered;
+                    }
+                }
+            }
+        }
+    }
+    header {
+        position: relative;
+        // border: 2px solid red;
+        box-sizing: border-box;
+        width: calc(100% - 200px);
+        height: calc(100% - 150px);
+        left: 50%;
+        top: 20px;
+        transform: translateX(-50%);
+        .box1 {
+            width: 800px;
+            height: 300px;
+            // border: 2px solid white;
+            outline: 5px solid #ff4500;
+            box-sizing: border-box;
+            position: absolute;
+            outline-offset: 8px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .box2 {
+            width: 400px;
+            height: 400px;
+            border: 200px solid orangered;
+            box-sizing: border-box;
+            position: absolute;
+            right: 0;
+            bottom: 0px;
+            outline: 2px solid white;
+            outline-offset: 10px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .titles {
+            position: absolute;
+            bottom: 0px;
+            h1 {
+                font-size: 8em;
+                // text-align: center;
+                text-transform: uppercase;
+                position: relative;
+                top: 20px;
+                font-family: 'Archivo Black', sans-serif;
+            }
+            p {
+                font-size: 1.5em;
+                text-align: right;
+                cite {
+                    font-size: .7em;
+                    color: orangered;
+                }
+            }
+        }
+    }
+}
